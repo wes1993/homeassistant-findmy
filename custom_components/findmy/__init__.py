@@ -20,7 +20,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: FindMyConfigEntry) -> bo
 
     hub = FindMyHub(entry.data[CONF_URL])
     hub.restore_account(entry.data[CONF_ACCOUNT])
-    hub.load_plist(entry.data[CONF_PLIST][0])
+    hub.load_plist(entry.data[CONF_PLIST])
 
     coordinator = FindMyUpdateCoordinator(hass=hass, hub=hub)
     await coordinator.async_config_entry_first_refresh()
