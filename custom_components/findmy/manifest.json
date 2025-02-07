@@ -5,7 +5,7 @@
     "@krmax44"
   ],
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/findmy",
+  "documentation": "https://github.com/krmax44/homeassistant-findmy",
   "iot_class": "cloud_polling",
   "requirements": [
     "findmy==0.7.6"
