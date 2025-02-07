@@ -1,0 +1,14 @@
+{
+  "domain": "findmy",
+  "name": "Find My",
+  "codeowners": [
+    "@krmax44"
+  ],
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/findmy",
+  "iot_class": "cloud_polling",
+  "requirements": [
+    "findmy==0.7.6"
+  ],
+  "version": "2025.2.0"
+}

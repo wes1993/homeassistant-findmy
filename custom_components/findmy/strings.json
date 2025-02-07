@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "init": {
+        "data": {
+          "url": "[%key:common::config_flow::data::url%]",
+          "username": "[%key:common::config_flow::data::username%]",
+          "password": "[%key:common::config_flow::data::password%]"
+        }
+      },
+      "2fa_method": {
+        "data": {
+          "2fa_method": "Two-Factor Method"
+        }
+      },
+      "2fa_code": {
+        "data": {
+          "2fa_code": "Two-Factor Code"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]",
+      "invalid_2fa_code": "Two-Factor Authentication failed.",
+      "invalid_file": "Invalid file."
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    }
+  }
+}
