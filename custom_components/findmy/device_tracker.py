@@ -1,13 +1,14 @@
 """Support for tracking FindMy devices."""
 
-from config.custom_components.findmy import FindMyConfigEntry
-from config.custom_components.findmy.coordinator import FindMyUpdateCoordinator
 from homeassistant.components.device_tracker import TrackerEntity
 from homeassistant.components.device_tracker.const import SourceType
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+
+from . import FindMyConfigEntry
+from .coordinator import FindMyUpdateCoordinator
 
 
 async def async_setup_entry(
