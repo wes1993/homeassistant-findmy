@@ -39,7 +39,7 @@ class FindMyHub:
 
     def restore_account(self, account: dict[str, Any]) -> None:
         """Restore account."""
-        self.account.restore(account)
+        self.account.from_json(account)
 
     async def get_2fa_methods(self) -> list[tuple[str, str]]:
         """Get two-factor methods."""
@@ -67,13 +67,12 @@ class FindMyHub:
     def get_account_credentials(self) -> dict[str, Any]:
         """Get account export."""
 
-        return self.account.export()
+        return self.account.to_json()
 
     def load_plist(self, plist: str):
         """Load plist."""
-        plist_io = io.BytesIO(bytes(plist, "utf-8"))
 
-        self.accessory = FindMyAccessory.from_plist(plist_io)
+        self.accessory = FindMyAccessory.from_plist(bytes(plist, "utf-8"))
 
     async def get_position(self) -> FindMyReport:
         """Get latest position."""
