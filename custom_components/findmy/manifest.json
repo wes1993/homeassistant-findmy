@@ -9,7 +9,7 @@
   "issue_tracker": "https://github.com/krmax44/homeassistant-findmy/issues",
   "iot_class": "cloud_polling",
   "requirements": [
-    "findmy==0.7.6"
+    "findmy==0.8.0"
   ],
   "version": "2025.2.2"
 }
