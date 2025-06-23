@@ -1,7 +1,6 @@
 """The FindMy hub."""
 
 from dataclasses import dataclass
-import io
 from typing import Any
 
 from datetime import datetime
@@ -30,7 +29,7 @@ class FindMyHub:
     def __init__(self, url: str) -> None:
         """Initialize."""
         self.anisette = RemoteAnisetteProvider(url)
-        self.account = AsyncAppleAccount(self.anisette)
+        self.account = AsyncAppleAccount(anisette=self.anisette)
 
     async def authenticate(self, email: str, password: str) -> LoginState:
         """Test if we can authenticate with the host."""
